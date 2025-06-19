@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.preister.testfxapp.PokemonController"
+      alignment="TOP_LEFT" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #b3e5ff, #80d8ff, #4fc3f7, #29b6f6); -fx-border-color: #000000; -fx-border-width: 4; -fx-background-radius: 10; -fx-border-radius: 10;">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <ImageView fx:id="sprite" fitHeight="150" fitWidth="150" />
+        
+        <VBox alignment="TOP_LEFT" spacing="10" style="-fx-text-fill: white;">
+            <Label fx:id="name" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+            <Label text="Type:" style="-fx-font-weight: bold;" />
+            <Label fx:id="type" style="-fx-font-size: 16px;"/>
+            <Label text="Abilities:" style="-fx-font-weight: bold;" />
+            <Text fx:id="ability" wrappingWidth="200" style="-fx-font-size: 16px;"/>
+        </VBox>
+    </HBox>
+
+    <Label text="Description:" style="-fx-font-weight: bold; -fx-text-fill: white;" />
+    <Text fx:id="description" wrappingWidth="300" style="-fx-font-size: 16px; -fx-text-fill: white;"/>
+
+    <Label text="Moves:" style="-fx-font-weight: bold; -fx-text-fill: white;" />
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+        <Text fx:id="moves" style="-fx-font-size: 16px; -fx-text-fill: white;" wrappingWidth="300"/>
+    </ScrollPane>
+
+    <Button fx:id="backToParty" text="Back to Party" onAction="#goBack" style="-fx-background-color: #0073e6; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 8; -fx-font-weight: bold;" />
+</VBox>
